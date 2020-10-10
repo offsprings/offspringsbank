@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>fintech Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		a {
+		    color: #d9534f;
+		    text-decoration: underline;
+		}
+	</style>
+</head>
+
+
+<body style="padding-top:0px;">
+	<hr class="space">
+	<hr class="space">
+	<div class="container">
+		
+		<h3 class="center alt">&ldquo;fintech documentation by &ldquo; Boomchart &rdquo; v1.0.x</h3>
+		
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 14/02/2020<br>
+					By: _boomchart<br>
+					Email: <a href="mailto:support@boomchart.com.ng">supportboomchart.com.ng</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, please feel free to email me.</p>
+			</div>
+
+			
+
+			</div><!-- end div .borderTop -->
+		
+		<hr>
+		<div class="">
+				<p class="prepend-top append-0"><strong> IF YOU DON’T WANT TO GET DOWN AND DIRTY WITH THE TECHNICAL SIDE OF SETTING UP fintech ON YOUR SERVER, YOU CAN HIRE ME TO MAKE THE SITE INSTALLATION FOR YOU.</strong></p>
+				<p> Thanks so much!</p>
+			</div>
+		<hr>
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">Preparing</a></li>
+			<li><a href="#cssFiles">Installation Process</a></li>
+			<li><a href="#admindashboard">Admin Dashboard </a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) Preparing</strong> - <a href="#toc">top</a></h3>
+		<p>
+			Make sure you have the following:
+		</p>
+		<ol>
+			<li>PHP >= 7.0.0</li>
+			<li>PDO PHP Extension</li>
+			<li>Tokenizer PHP Extension</li>
+			<li>OpenSSL PHP Extension</li>
+			<li>XML PHP Extension</li>
+			<li>Mbstring PHP Extension</li>
+			<li>GD Library</li>
+			<li>CURL Library</li>
+			<li>PHP mod_rewrite enabled</li>
+		</ol>
+		<p>
+			Make sure you have a mysql database already created, and also make sure that the database schema have already been imported.
+		</p>
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) Installation Process</strong> - <a href="#toc">top</a></h3>
+
+		<p>
+			First, let us say that in your hosting server, you have current <strong>/public_html/</strong> directory, which is accessible publicly via web domain, for example:
+		</p>
+		<p class="code">
+			<span style="color: #d9544f">/home/hosting-user/</span>public_html/
+		</p>
+		<p>
+			Now open the <strong>/public_html/</strong> directory in your server and upload the <strong>script.zip</strong> file downloaded from your purshase download page and unzip it.
+		</p>
+		<p>
+			At this point, you can find a <strong>".env"</strong> file in the <strong>/public_html/</strong> directory, if not, make sure the option to see hidden files is enabled on your hosting server.
+		</p>
+		<p>
+			Open the <strong>"public_html/.env"</strong> file and edit the database information , APP_NAME, APP_URL, and email information. 
+		</p>
+		<p class="code">
+				APP_NAME= <span style="color: #d9544f">fintech</span> <br>
+				APP_ENV=local <br>
+				APP_KEY=base64:NY0K0NvBZJKYObAyHI9v90CyQBKFxA8+1rWqETYoAEQ=<br>
+				APP_DEBUG=<span style="color: #d9544f">true</span><br>
+				APP_LOG_LEVEL=debug<br>
+				APP_URL=<span style="color: #d9544f">http://your-domain.com</span><br>
+				<br>
+				DB_CONNECTION=mysql<br>
+				DB_HOST=127.0.0.1<br>
+				DB_PORT=3306<br>
+				DB_DATABASE=<span style="color: #d9544f">Your database name</span><br>
+				DB_USERNAME=<span style="color: #d9544f">Your database user</span><br>
+				DB_PASSWORD=<span style="color: #d9544f">Your database password</span><br>
+				<br>
+				BROADCAST_DRIVER=log<br>
+				CACHE_DRIVER=file<br>
+				SESSION_DRIVER=file<br>
+				QUEUE_DRIVER=sync<br>
+				<br>
+				REDIS_HOST=127.0.0.1<br>
+				REDIS_PASSWORD=null<br>
+				REDIS_PORT=6379<br>
+				<br>
+				MAIL_DRIVER=smtp<br>
+				MAIL_HOST=<span style="color: #d9544f">smtp.mailtrap.io</span><br>
+				MAIL_PORT=<span style="color: #d9544f">2525</span><br>
+				MAIL_USERNAME=<span style="color: #d9544f">null</span><br>
+				MAIL_PASSWORD=<span style="color: #d9544f">null</span><br>
+				MAIL_ENCRYPTION=null<br>
+				<br>
+				PUSHER_APP_ID=<br>
+				PUSHER_APP_KEY=<br>
+				PUSHER_APP_SECRET=<br>
+		</p>
+		<p>
+			At this point, you can see that the site is accessible to the web, via <strong>http://yourdomain.com/ </strong> right?
+		</p>
+		<h3 id="admindashboard"><strong>D) Admin Dashboard</strong> - <a href="#toc">top</a></h3>		
+		<p>
+			Now, back to your website go to <strong>http://your-domain.com/admin</strong>
+		</p>
+		<p>
+			Now default username & password is <strong>admin </strong> & <strong>  1234</strong>.
+		</p>
+
+		<hr>
+		
+	</div><!-- end div .container -->
+</body>
+</html>
